@@ -47,6 +47,9 @@ console.log(strCopy);
 배열 내의 모든 요소 각각에 대하여 함수를 호출한 결과를 모아 새로운 배열을 반환
 ex. array1.map((x) => x \* 2);
 활용도가 상당히 높고 자주 쓰인다.
+ex2. 
+const s = "1 2 3 4"
+s.split(' ').map(Number)
 
 ##### 6. Array.prototype.pop(), Array.prototype.push()
 
