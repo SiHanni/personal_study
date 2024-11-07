@@ -1,0 +1,20 @@
+version: '3'
+services:
+  app:
+    image: proxy-server-image:latest
+    container_name: proxy-server
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - '3000:3000'
+  caddy:
+    image: caddy:2.9.0-beta.3-alpine
+    container_name: caddy
+    volumes:
+      - ../caddy/Caddyfile:/etc/caddy/Caddyfile
+    ports:
+      - '80:80'
+      - '443:443'
+    depends_on:
+      - app

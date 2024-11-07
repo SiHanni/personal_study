@@ -1,0 +1,5 @@
+localhost {
+    reverse_proxy /us/* localhost:3000
+    reverse_proxy /kr/* localhost:3000
+    reverse_proxy /jp/* localhost:3000
+}
