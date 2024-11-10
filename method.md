@@ -145,6 +145,19 @@ Not-a-Number
 
 isNaN: 값이 숫자로 변환될 수 없는 경우에 true를 반환합니다. 숫자로 변환할 수 있는 값은 false를 반환합니다. 하지만 숫자로 변환되는 값도 영향을 받아, 예기치 않은 동작이 발생할 수 있습니다.
 Number.isNaN: 엄격하게 NaN인 경우에만 true를 반환합니다. 값이 실제로 NaN인지를 판단하는 데 더 안전합니다.
+console.log(isNaN(NaN));       // true
+console.log(isNaN('Hello'));   // true (문자열을 숫자로 변환하려고 하므로 NaN)
+console.log(isNaN(123));       // false
+console.log(isNaN('123'));     // false (문자열 '123'은 숫자로 변환 가능)
+console.log(isNaN(undefined)); // true (undefined는 NaN으로 변환)
+비교 (Number.isNaN()의 경우 실제로 NaN이어야 true를 반환함.)
+console.log(Number.isNaN(NaN));         // true
+console.log(Number.isNaN('Hello'));     // false (문자열이므로 NaN이 아님)
+console.log(Number.isNaN(123));         // false
+console.log(Number.isNaN('123'));       // false
+console.log(Number.isNaN(undefined));   // false
+console.log(Number.isNaN(NaN));         // true
+console.log(Number.isNaN(NaN));         // true
 
 ##### 12. sort()
 
