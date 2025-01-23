@@ -4,7 +4,6 @@ export function solution(inputString: string): string {
 
   let answer = '';
   for (let i = 0; i < inputString.length; i++) {
-    console.log(inputString[i]);
     if (lowerAlphabet.includes(inputString[i])) {
       const index = lowerAlphabet.indexOf(inputString[i]);
       answer += upperAlphabet[index];
